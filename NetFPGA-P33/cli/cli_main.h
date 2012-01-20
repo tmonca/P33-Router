@@ -36,6 +36,6 @@ typedef struct cli_client_t {
  *
  * @return CLI_SHUTDOWN on normal termination, CLI_ERROR on unrecoverable error
  */
-int cli_main( uint16_t port );
+int cli_main( uint16_t );
 
 #endif /* CLI_MAIN_H */

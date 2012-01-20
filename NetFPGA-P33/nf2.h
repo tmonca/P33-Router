@@ -15,7 +15,14 @@
 #define NF2_DEV_NAME	"nf2"
 
 /* Include for socket IOCTLs */
+#ifdef _LINUX_
 #include <linux/sockios.h>
+#endif
+
+#ifdef _DARWIN_
+#include <sys/sockio.h>
+#endif
+#include <sys/sockio.h>
 
 /* Maximum number of interfaces */
 #ifndef MAX_IFACE

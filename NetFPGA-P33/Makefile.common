@@ -13,9 +13,11 @@ SOCK = -lnsl -lsocket
 SOLARIS_LIBS=-lrt
 endif
 
-ifeq ($(OSTYPE),Darwin)
+
+
+ifeq ($(OSTYPE),darwin11)
 ARCH = -D_DARWIN_
-SOCK =
+SOCK = -lresolv
 endif
 
 LIBS= $(SOCK) -lm -lresolv -lpthread $(SOLARIS_LIBS)
